@@ -28,7 +28,6 @@ function mostrarAmigos() {
 }
 
 function sortearAmigo() {
-  
   if (amigos.length === 0) {
     alert("No hay amigos para sortear.");
     return;
@@ -40,5 +39,9 @@ function sortearAmigo() {
 
   let resultado = document.getElementById("resultado");
   resultado.innerHTML = `<li>🎉 El amigo secreto es: <strong>${nombreSorteado}</strong></li>`;
+
+  amigos = []; // vaciar array
+  document.getElementById("listaAmigos").innerHTML = ""; // vaciar lista
+  document.getElementById("amigo").value = ""; // limpiar input
 }
 
